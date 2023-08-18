@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:vm="clr-namespace:ControlBindingTest.ViewModels"
+			 x:Class="ControlBindingTest.Views.MainPage"
+			 x:DataType="vm:MainViewModel">
+    <VerticalStackLayout>
+        <Label FontSize="Header" Text="Entries that have been manually edited will not be overwritten through the binding from the view model." />
+        <Label Text="Entry 1" />
+        <Entry Text="{Binding Input, Mode=TwoWay}" />
+        <Label Text="Entry 2" />
+        <Entry Text="{Binding Input, Mode=TwoWay}" />
+        <Label Text="Entry 3" />
+        <Entry Text="{Binding Input, Mode=TwoWay}" />
+        <Button Text="Click me" Command="{Binding ClickMeCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
